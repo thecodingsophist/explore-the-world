@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 require('dotenv').config()
 
 const app = express();
-const host = 'localhost';
+const host = '0.0.0.0';
 const PORT = process.env.PORT || 3000;
 
 
