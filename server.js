@@ -1,6 +1,7 @@
-const env = require('dotenv').config()
 const express = require('express');
 const exphbs = require("express-handlebars");
+
+require('dotenv').config()
 
 const app = express();
 const host = 'localhost';
