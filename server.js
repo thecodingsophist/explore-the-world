@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require("express-handlebars");
+var serveStatic = require('serve-static')
 
 require('dotenv').config()
 
@@ -7,9 +8,10 @@ const app = express();
 const host = '0.0.0.0';
 const PORT = process.env.PORT || 3000;
 
-
-app.engine('handlebars', exphbs({defaultLayout: 'views/home'}));
 app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({defaultLayout: 'views/layouts/main'}));
+
+app.use(express.static('public'));
 
 app.get('/', function(req, res) {
     res.render('home', {layout: 'main'});
