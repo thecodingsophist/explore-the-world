@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require("express-handlebars");
 
 const app = express();
-// const host = 'localhost';
+const host = 'localhost';
 const PORT = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({defaultLayout: 'views/home'}));
