@@ -4,7 +4,7 @@ function locations(app) {
     app.get('/location', (req, res) => {
         var location = req.param('location');
             // modified code snippet from RapidAPI
-            console.log('location is in getLocationsId: ' + location)
+            // console.log('location is in getLocationsId: ' + location)
 
             var request = require("request");
             var options = {
@@ -31,17 +31,10 @@ function locations(app) {
                 if (error) throw new Error(error);
                      var data = JSON.parse(body);
                      let locationId = data.tracking.search_id;
-                     console.log("FINALLY, THO NOT QUITE!?!: " + locationId);
                      res.send(locationId);
             });
-            // console.log("FINALLY!?!: " + locationId);
         })
-
             // end modified RapidAPI code snippet
-
-        // res.send(console.log(getLocationsId(location)))
-        // res.render('main.handlebars')
-
     }
 
 module.exports = locations
