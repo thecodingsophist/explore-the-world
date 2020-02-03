@@ -6,7 +6,7 @@ function locations(app) {
         // var location = req.param.location;
         // console.log("~~~~~~LOCATION: " + location);
             // modified code snippet from RapidAPI
-            // console.log('location is in getLocationsId: ' + location)
+            console.log('location is in getLocationsId: ' + location)
 
             var request = require("request");
             var options = {
@@ -28,7 +28,6 @@ function locations(app) {
                 'x-rapidapi-key': 'ef487ee468mshbe34d02d25cc489p1706c1jsn1869921801c8'
               }
             };
-
             request(options, function (error, response, body) {
                 if (error) throw new Error(error);
                     var data = JSON.parse(body)
@@ -54,6 +53,8 @@ function locations(app) {
                         'x-rapidapi-key': 'ef487ee468mshbe34d02d25cc489p1706c1jsn1869921801c8'
                       }
                     };
+
+                    console.log("locationId is: " + locationId)
 
                     request(options_for_loc, function (error, response, body) {
                     	if (error) throw new Error(error);
