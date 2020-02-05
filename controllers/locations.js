@@ -3,8 +3,7 @@ function locations(app) {
     //GET LOCATION
     app.get('/location', (req, res) => {
         var location = req.param('location');
-        // var location = req.param.location;
-        // console.log("~~~~~~LOCATION: " + location);
+        
             // modified code snippet from RapidAPI
             console.log('location is in getLocationsId: ' + location)
 
